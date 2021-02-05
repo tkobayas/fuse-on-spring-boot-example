@@ -1,0 +1,21 @@
+logging:
+  level:
+    root: info
+camel:
+  springboot:
+    name: MyApplication
+  component:
+    servlet:
+      mapping:
+        context-path: /my-app/*
+
+server:
+  port: 8080
+management:
+  server:
+    port: ${MANAGEMENT_PORT:8081}
+  endpoints:
+    enabled-by-default: false
+  endpoint:
+    health:
+      enabled: false
